@@ -1,0 +1,18 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/index.js",
+            "args": ["[{\"IsNew\":true,\"InitContainer\":\"False\",\"Ports\":[{\"value\":\"6379\"}],\"EnvironmentVariables\":[],\"SecretEnvironmentVariables\":[],\"SecretEnvFromSource\":[],\"ConfigMapEnvironmentVariables\":[],\"ConfigMapEnvFromSource\":[],\"FieldRefEnvironmentVariables\":[],\"VolumeMounts\":[{\"key\":\"redis-data\",\"value\":\"/data\",\"option\":\"\"}],\"AcquisitionLocation\":\"NotAcquired\",\"Name\":\"redis\",\"PackageId\":\"redis\",\"FeedId\":\"Feeds-1193\",\"Properties\":{},\"Command\":[],\"Args\":[],\"Resources\":{\"requests\":{\"memory\":\"200Mi\",\"cpu\":\"70m\",\"ephemeralStorage\":\"\"},\"limits\":{\"memory\":\"256Mi\",\"cpu\":\"125m\",\"ephemeralStorage\":\"\",\"nvidiaGpu\":\"\",\"amdGpu\":\"\"}},\"LivenessProbe\":{\"failureThreshold\":\"\",\"initialDelaySeconds\":\"\",\"periodSeconds\":\"5\",\"successThreshold\":\"\",\"timeoutSeconds\":\"\",\"type\":\"TcpSocket\",\"exec\":{\"command\":[]},\"httpGet\":{\"host\":\"\",\"path\":\"\",\"port\":\"\",\"scheme\":\"\",\"httpHeaders\":[]},\"tcpSocket\":{\"host\":\"\",\"port\":\"6379\"}},\"ReadinessProbe\":{\"failureThreshold\":\"\",\"initialDelaySeconds\":\"\",\"periodSeconds\":\"5\",\"successThreshold\":\"\",\"timeoutSeconds\":\"\",\"type\":\"TcpSocket\",\"exec\":{\"command\":[]},\"httpGet\":{\"host\":\"\",\"path\":\"\",\"port\":\"\",\"scheme\":\"\",\"httpHeaders\":[]},\"tcpSocket\":{\"host\":\"\",\"port\":\"6379\"}},\"StartupProbe\":{\"failureThreshold\":\"\",\"initialDelaySeconds\":\"\",\"periodSeconds\":\"\",\"successThreshold\":\"\",\"timeoutSeconds\":\"\",\"type\":null,\"exec\":{\"command\":[]},\"httpGet\":{\"host\":\"\",\"path\":\"\",\"port\":\"\",\"scheme\":\"\",\"httpHeaders\":[]},\"tcpSocket\":{\"host\":\"\",\"port\":\"\"}},\"Lifecycle\":{},\"SecurityContext\":{\"allowPrivilegeEscalation\":\"false\",\"privileged\":\"false\",\"readOnlyRootFilesystem\":\"true\",\"runAsGroup\":\"\",\"runAsNonRoot\":\"\",\"runAsUser\":\"\",\"capabilities\":{\"add\":[],\"drop\":[\"all\"]},\"seLinuxOptions\":{\"level\":\"\",\"role\":\"\",\"type\":\"\",\"user\":\"\"}}}]"]
+        }
+    ]
+}

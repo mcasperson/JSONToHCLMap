@@ -14,6 +14,10 @@ function encodeAsHcl(input, output) {
         output = ""
     }
 
+    if (input === null) {
+        return encodeNullAsHcl(input, output);
+    }
+
     if (Array.isArray(input)) {
         return encodeArrayAsHcl(input, output);
     }
@@ -49,6 +53,10 @@ function encodeObjectAsHcl(jsonObject, output) {
 
 function encodeOtherAsHcl(other, output) {
     return output + other;
+}
+
+function encodeNullAsHcl(other, output) {
+    return output + "null";
 }
 
 function encodeStringAsHcl(string, output) {
@@ -95,4 +103,4 @@ function decodeString(jsonString) {
     return fixedString;
 }
 
-jsonToHclMap("[{\"name\":\"grpc\",\"port\":\"9555\",\"targetPort\":\"9555\"}]")
+jsonToHclMap(process.argv.slice(2)[0])
