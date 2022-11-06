@@ -103,4 +103,10 @@ function decodeString(jsonString) {
     return fixedString;
 }
 
-jsonToHclMap(process.argv.slice(2)[0])
+const myArgs = process.argv.slice(2);
+if (myArgs.length != 0) {
+    jsonToHclMap(myArgs[0])
+} else {
+    console.log("Pass the JSON to be converted as the first argument, e.g.");
+    console.log("node index.js \"{\\\"key\\\": \\\"value\\\"}\"");
+}
