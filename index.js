@@ -5,7 +5,7 @@ function jsonToHclMap(jsonString) {
 
     let fixedString = decodeString(jsonString);
     let jsonObject = JSON.parse(fixedString);
-    console.log("jsonencode(\n" + encodeAsHcl(jsonObject, "") + ")");
+    console.log("jsonencode(" + encodeAsHcl(jsonObject, "") + ")");
     
 }
 
@@ -35,7 +35,7 @@ function encodeObjectAsHcl(jsonObject, output) {
     let entries = Object.entries(jsonObject);
     let entryCount = entries.length;
     for (const [index, entry] of entries.entries()) {
-        output += entry[0] + ": ";
+        output += entry[0] + " : ";
         output += encodeAsHcl(entry[1]);
         if (index != entryCount - 1) {
             output += ",";
